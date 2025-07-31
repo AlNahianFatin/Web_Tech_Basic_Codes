@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- This will work on mobile devices in Chrome -->
+    <meta theme="theme-color" content="rgb(118, 73, 45)">
+
+    <title>Hello</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /*Internal CSS & Element Selector*/
+        styledh1 {
+            color: white;
+            background-color: rgb(118, 73, 45)
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello!</h1>
+    <a href='/index.html'>Go back to Home Page</a><br><br><br>
+
+     <!-- Inline CSS -->
+    <text style="color: black; background-color: rgb(235, 227, 219);">This text is written in Inline CSS</text><br>
+    <styledh1>This text is written in Internal CSS</styledh1><br>
+    <externallyStyledh1>This text is written in External CSS</externallyStyledh1>
+    <br><br>
+
+    <styledh1>This text is written using Element Selector</styledh1><br>
+    <text class="redBack">This text is written using Class Selector</text><br>
+    <text id="greenBack">This text is written using Id Selector</text><br>
+    <div>
+        This text is written
+        <aaa>using Child Selector</aaa>
+    </div>
+    <div>
+        <t>This text is written using Pseudo Selector (first child attribute).</t>
+        <t>Though this text isn't affected as it's the second child</t>
+        <article>
+            This text is written
+            <a>using Descendant Selector</a>
+        </article>
+    </div>
+
+    <a href="https://www.google.com">Go to Google</a>
+    <a href="https://www.facebook.com">Go to Facebook</a>
+
+    <div class="box box1">I am a box</div>
+    <div class="box box2">I am another box</div>
+</body>
+</html>
