@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Another Hello</title>
+
+    <!-- using fallout font through HTML link inside head tag  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+
+    <style>
+        /* using fallout font through import inside style tag/Internal CSS */
+        @import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Jaro:opsz@6..72&display=swap');
+        
+        h1 {
+            font-family: Jaro, 'Hachi Maru Pop';
+            font-optical-sizing: auto;
+            font-style: normal;
+            text-decoration: underline;
+            text-align: center;
+            font-size: 50px; /* Defines how big the text appears. Measures the height of the font’s em square (not the visible height exactly). Units: px, em, rem, %, etc. */
+            line-height: 1; /*Controls the vertical spacing between lines of text in a block. Think of it as the total height each line occupies. line-height can be a number (e.g., 1.5) or a unit value (e.g., 20px). */
+            font-weight: 500; /* Controls the thickness (boldness) of the font. Common values: normal, bold, or numeric: 100 (thin) to 900 (very bold) */
+        }
+
+        .p {
+            text-align: center;
+            font-family: 'Hachi Maru Pop', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: 1000; /* making font bolder */
+            letter-spacing: 10px;
+            text-transform: capitalize;
+
+            text-decoration: overline;
+            text-decoration-style: wavy;
+            text-decoration-color:chocolate;
+            text-decoration-thickness: 5px;
+            text-indent: 300px; /*Only the first line of the paragraph is pushed in — not the entire paragraph. */
+        }
+
+        @keyframes pulse { /* The @keyframes rule lets you create animations by gradually changing CSS properties. You give the animation a name (pulse in this case), then define steps (called "keyframes") at specific points (like 0%, 50%, 100%). */
+            0%   { font-weight: 100; } /* At the start: thin */
+            25%  { font-weight: 500; } /* Mid-halfway: thicker */
+            50%  { font-weight: 900; } /* Halfway: thick */
+            75%  { font-weight: 500; } /* Mid-end: thinner */
+            100% { font-weight: 100; } /* End: back to thin */
+        }
+
+        h2 {
+            text-indent: 50px;
+            height: 200px;
+            width: 130px;
+            border: 5px dashed salmon;
+            text-overflow: ellipsis;
+            overflow: scroll;
+            word-break: break-all;
+        }
+
+        .variable-text {
+            animation: pulse 2s ease-in-out infinite; /* ease-in-out means: Starts slowly > Speeds up in the middle > Slows down at the end */
+        }
+
+        
+        .yellow { /* Specificity value: 10 */ 
+            color: yellow
+        }
+
+        h4.purple {
+            color: purple /* Specificity value: 1 + 10 = 11 */ 
+        }
+
+        .slateblue { /* Specificity value: 10; but has the topmost priority */ 
+            color:slateblue !important
+        }
+
+        .red {
+            color: red /* Specificity value: 10 */ 
+        }
+
+        [data-x=a] { /* Specificity value: 10 */ 
+            color:gray
+        }
+
+        #id { /* Specificity value: 100 */ 
+            color:yellowgreen
+        }
+
+        h3 { /* Specificity value: 1 */ 
+            color:blue
+        }
+
+        * { /* Specificity value: 0 */ 
+            color:black
+        }
+
+    </style>
+</head>
+
+<body>
+    <div style="text-align: center">
+        <a href="/index.html" class="variable-text">Go back to Home Page</a>
+    </div>
+
+    <div style="text-align: center">
+        <a href='/HELLO.html' style="font-family: 'Courier New', Courier, monospace;">Go back</a>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 50vh;">
+        <!-- display: flex;	            Turns the <div> into a flex container, enabling Flexbox layout. -->
+        <!-- flex-direction: column;	Stacks child elements vertically instead of the default horizontal row. -->
+        <!-- justify-content: center;	Centers the items vertically (main axis in a column layout). -->
+        <!-- align-items: center;	    Centers the items horizontally (cross axis). -->
+        <!-- height: 100vh;	            Makes the <div> take up 100% of the viewport height. -->
+            <a class="variable-text" style="font-family: sans-serif; font-size: 50px;">This is the center</a><br>
+        <a class="variable-text" style="font-family: sans-serif; font-size: 20px;">Scroll Down</a>
+        <a class="variable-text" style="font-family: sans-serif; font-size: 20px;">V</a>
+    </div>
+
+    <h1 class="variable-text">Nurture Tuitions</h1>
+    <p class="p">This is a code on fonts</p>
+
+    <h2>Hello coder how are you doing today you marvelous amazing_spiderman</h2><br>
+
+    <p style="font-size: 30px; background-color: aqua;">
+        Color can be represented in:
+        <ol style="font-size: 30px; background-color: wheat;">
+            <li style="color: darkgoldenrod;">Color Keywords</li>
+            <li style="color: #ba4a00;">Hex Color Codes</li>
+            <li style="color: rgb(22, 160, 133);">RGB</li>
+            <li style="color: rgba(22, 160, 133, 0.221432);">RGBA</li>
+            <li style="color: hsl(282, 39%, 68%);">HSL</li>
+        </ol>
+    </p>
+
+    <h1 class="yellow red purple">CSS Specificity</h1>
+    <h3 style="color:brown; display: flex; justify-content: center" id="id" class="yellow red purple" data-x="a"class="yellow red purple" data-x="a">
+        Inline Style > ID Selector > Class or Attribute Selector > Element Selector > Universal Selector 
+    </h3>
+
+    <h4 style="color:brown; display: flex; justify-content: center" id="id" class="yellow red slateblue purple" data-x="a">
+        But "!important" flag gets the topmost priority
+    </h4>
+    
+    <h4 style="display: flex; justify-content: center" class="yellow red purple" data-x="a">
+        Text printed in purple as it currently has the max specificity value (11) for h4 tag
+    </h4>
+
+    <h3 style="display: flex; justify-content: center" class="yellow red purple" data-x="a">
+        However, this specificity (11) doesn't apply to h3, so it gets gray as per last defined Attribute Selector
+    </h3>
+</body>
+</html>
