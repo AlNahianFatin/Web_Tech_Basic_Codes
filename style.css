@@ -1,0 +1,81 @@
+/* External CSS */
+externallyStyledh1 {
+    color: white;
+    background-color: rgb(255, 0, 0)
+}
+
+/* Class Selector */
+.redBack {
+    background-color: red;
+}
+
+/* Id Selector */
+#greenBack {
+    background-color: green;
+}
+
+/* Child Selector */
+div>aaa {
+    color: blue;
+    background-color: yellow;
+}
+
+/* Descendant Selector */
+div a {
+    color: whitesmoke;
+    background-color: red;
+}
+
+/* Universal Selector */
+* {
+    margin: 5px;
+    /*Adds 5 pixels of space outside the element’s border — like outer breathing room. 
+                           Applies to all four sides (top, right, bottom, left) equally.*/
+    padding: 0px;
+    /*Adds 0 pixels of space inside the element’s border — no internal space.
+                           No extra space between the content and the border.*/
+    box-sizing: border-box;
+}
+
+/* Pseudo Selectors - */
+a:link {
+    color: red
+        /* if the link hasn't been visited yet */
+}
+
+a:visited {
+    color: yellowgreen
+        /* if the link has already been visited */
+}
+
+a:active {
+    background-color: blueviolet;
+    /* when the link is click */
+}
+
+a:hover {
+    background-color: aqua;
+    /* when the cursor is hovered over the link */
+}
+
+t:first-child {
+    background-color: violet;
+    /*wherever t is the "first" child */
+}
+
+.box {
+    background-color: aquamarine;
+    margin: 5px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: 2px solid blue;
+    height: 70px;
+    box-sizing: border-box;
+}
+
+.box1 {
+    color:black
+}
+.box2 {
+    color:rgb(223, 14, 101)
+}
