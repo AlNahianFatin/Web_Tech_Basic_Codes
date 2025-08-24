@@ -4,8 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS_Shadows_and_Outlines</title>
+
+    <style>
+        .box-shadow {
+            border: 2px solid black;
+            box-shadow: 2px 3px 4px 3px grey inset;
+            /* h-offset v-offset blur spread color inset */
+        }
+        .text-shadow {
+            font-weight: 2000;
+            border: 2px solid black;
+            text-shadow: 5px 5px 1.5px rgb(150, 145, 101);
+            /* h-offset v-offset blur spread color inset */
+        }
+        .outline {
+            border: 2px solid black;
+            outline: 3px solid rgb(184, 183, 240);
+            /* width style color */
+            /* outline applies around border and doesn't take any extra space */
+            border-radius: 10px;
+            /* outline radius also gets affected with border radius as if outline is the border around the border */
+            outline-offset: 9px;        
+            /* offsets/adds spaces outline from the border */
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="box-shadow">Shadow has been applied inside the box here</div>
+    <p class="text-shadow">The texts hase shadow here withe lorem22  =>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore tenetur sint ipsam earum maiores animi facilis nulla, voluptate necessitatibus, voluptatum dolor odio.</p>
+    <div class="outline">Pink outline for this element has been applied around the black border</div>
 </body>
 </html>
