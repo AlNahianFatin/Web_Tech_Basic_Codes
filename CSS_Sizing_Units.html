@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_Sizing_Units</title>
+
+    <style>
+        html {
+            font-size: 30px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            border: 2px solid black;
+            box-sizing: border-box;
+            /* default font-size: 16px */
+
+            /* width: 1920px; */
+            /* pixel -> 196 pixel = 1 inch  */
+            
+            /* width: 50vw; */
+            /* viewport width ->  */
+            margin: auto;
+            /* automatically equally sets left and right margin (same) to center the block elements only, not inline elements */
+            
+            /* height: 10vh; */
+            /* viewport height */
+                        
+            font-size: 0.7em; 
+            /* won't work now because rem font-sizing is currently being applied here */
+            /* multiplies the value with its inherited property value (e.g, if inherited font-size is 16px, which is the default value)
+            the final font-size becomes, font-size = 16px * 0.6 = 13.2px */
+            
+            font-size: 0.6rem;
+            /* root em -> multiplies the value with the property value that should have been inherited from the root element(html) */
+            
+            width: 100vmin;
+            /* viewport minimum -> as height is the minimum for my laptop between height and width, the 100% of the height (~ 100vh) will be set as width here */
+
+            height: 100vmax;
+            /* viewport maximum -> as width is the maximum for my laptop between height and width, the 100% of the width (~ 100vw) will be set as height here */
+            
+            background-color: aquamarine;
+        }
+        
+        .box {
+            border: 2px solid black;
+            box-sizing: border-box;
+            width: 50vw;
+            margin: 90vw auto;
+            background-color: pink;
+            height: 10vh;
+            font-size: 22px;
+        }
+        .box p {
+            font-size: 0.3em; 
+            /* won't work now because rem font-sizing is currently being applied here */
+            /* now font size becomes 22px * 0.6 = 13.2px (22px font-size inherited from parent box class) */
+            
+            font-size: 0.6rem;
+            /* now font size becomes 30px * 0.6 = 18px (22px font-size inherited from parent box class) */
+        
+            width: 60%;
+            /* setting width as 60% of the inherited width (50vw) from parent class box  */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">Hi I am Fatin</div>
+    <span class="container">This is a paragraph</span>
+    <div class="box">
+        <p>
+            ipsum dolor sit amet, consectetur adipisicing elit. Quo veniam incidunt repudiandae consequuntur cum
+            excepturi fugit illum vero ad! Quia vero obcaecati molestias aliquam corporis facere, fuga quam eius ut
+            nesciunt et, deleniti dolorum voluptates! Accusamus voluptate, sunt voluptas esse vel vitae modi a corrupti
+            dolor id rerum, natus hic veniam temporibus nam, deserunt perferendis obcaecati.
+        </p>
+    </div>
+</body>
+
+</html>

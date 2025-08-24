@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_Display_Property</title>
+
+    <style>
+        .inline {
+            border: 2px solid red;
+            display: inline; /* if display is declared as inline, margin, padding etc will only work for bottom, left and right; not top */
+            width: 56px; /* width property doesn't work because declaring display as inline already sets the element as inline and cancels extra spacings, paddings, margins etc */ 
+            margin: 34px;
+            padding: 34px;
+        }
+        .inline-block {
+            border: 2px solid black;
+            display: inline-block; /* if display is declared as inline-block, margin, padding etc will be applied for all the sides */
+            width: 1876px; /* width property will now work -> (1920px screen size - 10px left margin - 10px right margin - 10 px left padding - 10px right margin - 2px left border - 2px right border = 1876px */ 
+            margin: 10px;
+            padding: 10px;
+        }
+        .none {
+            border: 2px solid black;
+            /* display: none;  */
+            /* The box will now become hidden with its taken spaces */
+            visibility: hidden; 
+            /* This will just hide the box and its elements but will preserve the space */
+            margin: 10px;
+            padding: 10px;
+        }
+        .flex {
+            display: flex;
+            justify-content: center; /* this only works with display flex */ 
+        }
+        .inline-flex {
+            display: inline-flex;
+            justify-content: center; /* this only works with display flex */
+        }
+    </style>
+
+</head>
+<body>
+    <div class="inline">This will become inline rather than a block element</div>
+    <span>This is already an inline element</span>
+    <div class="inline-block">Now this is inline-block</div>
+    <div class="none">The box will now become hidden but will also take space</div>
+    <div class="flex">The box is now in center with display flex and justify-content as center</div>
+    <div class="inline-flex">The box has now become flex but also an inline element. -></div>
+    <span>And this is the proof of its being an inline as this line is an inline element but sits right beside the previous line</span>
+</body>
+</html>
